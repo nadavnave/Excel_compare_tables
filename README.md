@@ -12,6 +12,7 @@ Check that you can run on the cmd the command python and you don't get an error.
 
 ```
 pip install pandas
+pip install xlrd
 ```
 
 ## 3.  Download this script into local pc
@@ -31,7 +32,7 @@ pip install pandas
 run the command
 
 ```
-python piano_tuning.py -h
+python piano_tunning.py -h
 ```
 
 to know the argument to pass to piano tuning script.
