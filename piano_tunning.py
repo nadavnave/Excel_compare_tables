@@ -1,6 +1,8 @@
 import pandas as pd
 import argparse
 
+telephone_col_name = "Tel number"
+
 parser = argparse.ArgumentParser(description='create excel of phone numbers from last year that were not called to this year')
 parser.add_argument('last_year_filename', type=str, help="The excel file name of phone numbers and names of from last year. Columns must be [Name, Tel number]")
 parser.add_argument('cur_year_filename', type=str, help="The excel file name of phone numbers and names of from current year. Columns must be [Name, Tel number]")
@@ -15,14 +17,14 @@ print( "*** Reading {} and {} excel files".format(last_year_filename, cur_year_f
 last_year_df = pd.read_excel(last_year_filename)
 cur_year_df  = pd.read_excel(cur_year_filename)
 print("---- Last year excel ----")
-print(last_year_df)
+#print(last_year_df)
 
 print("---- Current year excel ----")
-print(cur_year_df)
+#print(cur_year_df)
 
 
-last_year_tel_numbers = set(last_year_df["Tel number"].tolist())
-cur_year_tel_numbers = cur_year_df["Tel number"].tolist()
+last_year_tel_numbers = set(last_year_df[telephone_col_name].tolist())
+cur_year_tel_numbers = cur_year_df[telephone_col_name].tolist()
 
 result_df = pd.DataFrame(columns=['Name', 'Tel number'])
 print("*** Finding not duplicated numbers")
