@@ -13,6 +13,7 @@ Check that you can run on the cmd the command python and you don't get an error.
 ```
 pip install pandas
 pip install xlrd
+pip install xlwt
 ```
 
 ## 3.  Download this script into local pc
