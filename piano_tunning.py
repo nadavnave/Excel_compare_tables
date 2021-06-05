@@ -30,7 +30,7 @@ result_df = pd.DataFrame()
 print("*** Finding not duplicated numbers")
 for number in last_year_tel_numbers:
     if number not in cur_year_tel_numbers:
-        result_df = result_df.append(last_year_df[last_year_df[telephone_col_name]==number])
+        result_df = result_df.append(last_year_df[last_year_df[telephone_col_name]==number].iloc[0])
 
 print("------ The result excel is -------")
 print(result_df)
